@@ -15,7 +15,7 @@ set_property(
 target_link_libraries(
     conan-example_test
     PRIVATE
-    conan-example_lib
+    imgui::imgui
     doctest::doctest
 )
 target_compile_features(conan-example_test PRIVATE cxx_std_17)
