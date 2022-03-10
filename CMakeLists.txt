@@ -14,6 +14,7 @@ include(cmake/project-is-top-level.cmake)
 include(cmake/variables.cmake)
 
 find_package(imgui REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 # ---- Declare executable ----
 
@@ -28,7 +29,7 @@ set_target_properties(
 
 target_compile_features(conan-example_exe PRIVATE cxx_std_17)
 
-target_link_libraries(conan-example_exe PRIVATE imgui::imgui)
+target_link_libraries(conan-example_exe PRIVATE imgui::imgui Eigen3::Eigen)
 
 # ---- Install rules ----
 
