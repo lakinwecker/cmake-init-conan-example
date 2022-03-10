@@ -1,9 +1,7 @@
 #include <doctest/doctest.h>
-#include <lib.hpp>
+#include <imgui.h>
 
 TEST_CASE("lib")
 {
-  library lib;
-
-  REQUIRE_EQ(lib.name, "conan-example");
+  REQUIRE(true);
 }

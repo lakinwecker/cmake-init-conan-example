@@ -1,5 +1,5 @@
 [requires]
-fmt/8.0.0
+imgui/1.81
 # testing only deps below
 doctest/2.4.6
 
@@ -7,3 +7,4 @@ doctest/2.4.6
 CMakeToolchain
 CMakeDeps
 VirtualRunEnv
+
