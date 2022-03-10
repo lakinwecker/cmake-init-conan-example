@@ -13,8 +13,8 @@ project(
 include(cmake/project-is-top-level.cmake)
 include(cmake/variables.cmake)
 
-find_package(imgui REQUIRED)
-find_package(Eigen3 REQUIRED)
+find_package(imgui REQUIRED CONFIG)
+find_package(Eigen3 REQUIRED CONFIG)
 
 # ---- Declare executable ----
 
