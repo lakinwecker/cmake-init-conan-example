@@ -1,10 +1,8 @@
 [requires]
 imgui/1.81
+eigen/3.3.9
 # testing only deps below
 doctest/2.4.6
 
 [generators]
-CMakeToolchain
-CMakeDeps
-VirtualRunEnv
-
+cmake_find_package_multi
