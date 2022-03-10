@@ -8,6 +8,125 @@ cmake --preset=dev
 VERBOSE=1 cmake --build --preset=dev
 ```
 
+### output
+```sh
+cmake-init-conan-example on  master [⇡?] is 📦 v0.1.0 via 🐍 v3.10.2 (.venv)
+➜ rm -rf conan build
+
+cmake-init-conan-example on  master [⇡?] is 📦 v0.1.0 via 🐍 v3.10.2 (.venv)
+➜ conan install . -if conan -s build_type=Debug
+Configuration:
+[settings]
+arch=x86_64
+arch_build=x86_64
+build_type=Debug
+compiler=gcc
+compiler.libcxx=libstdc++
+compiler.version=11
+os=Linux
+os_build=Linux
+[options]
+[build_requires]
+[env]
+
+conanfile.txt: Installing package
+Requirements
+    doctest/2.4.6 from 'conancenter' - Cache
+    eigen/3.3.9 from 'conancenter' - Cache
+    imgui/1.81 from 'conancenter' - Cache
+Packages
+    doctest/2.4.6:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9 - Cache
+    eigen/3.3.9:5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9 - Cache
+    imgui/1.81:133a1f2158ff2cf69739f316ec21143785be54c7 - Cache
+
+Installing (downloading, building) binaries...
+doctest/2.4.6: Already installed!
+eigen/3.3.9: Already installed!
+imgui/1.81: Already installed!
+imgui/1.81: Appending PATH env var with : /home/lakin/.conan/data/imgui/1.81/_/_/package/133a1f2158ff2cf69739f316ec21143785be54c7/bin
+conanfile.txt: Generator cmake_find_package_multi created imgui-config-version.cmake
+conanfile.txt: Generator cmake_find_package_multi created imgui-config.cmake
+conanfile.txt: Generator cmake_find_package_multi created imguiTargets.cmake
+conanfile.txt: Generator cmake_find_package_multi created imguiTarget-debug.cmake
+conanfile.txt: Generator cmake_find_package_multi created Eigen3ConfigVersion.cmake
+conanfile.txt: Generator cmake_find_package_multi created Eigen3Target-debug.cmake
+conanfile.txt: Generator cmake_find_package_multi created Eigen3Targets.cmake
+conanfile.txt: Generator cmake_find_package_multi created Eigen3Config.cmake
+conanfile.txt: Generator cmake_find_package_multi created doctest-config-version.cmake
+conanfile.txt: Generator cmake_find_package_multi created doctest-config.cmake
+conanfile.txt: Generator cmake_find_package_multi created doctestTargets.cmake
+conanfile.txt: Generator cmake_find_package_multi created doctestTarget-debug.cmake
+conanfile.txt: Generator txt created conanbuildinfo.txt
+conanfile.txt: Aggregating env generators
+conanfile.txt: Generated conaninfo.txt
+conanfile.txt: Generated graphinfo
+
+cmake-init-conan-example on  master [⇡?] is 📦 v0.1.0 via 🐍 v3.10.2 (.venv)
+➜ cmake --preset=dev
+Preset CMake variables:
+
+  CMAKE_BUILD_TYPE="Debug"
+  CMAKE_CXX_EXTENSIONS="OFF"
+  CMAKE_CXX_FLAGS="-Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wshadow -Wformat=2 -Wundef -Werror=float-equal"
+  CMAKE_CXX_STANDARD="17"
+  CMAKE_CXX_STANDARD_REQUIRED="ON"
+  CMAKE_EXPORT_COMPILE_COMMANDS="True"
+  CMAKE_MODULE_PATH="/home/lakin/school-repos/cmake-init-conan-example/conan/"
+  CMAKE_PREFIX_PATH="/home/lakin/school-repos/cmake-init-conan-example/conan/"
+  conan-example_DEVELOPER_MODE="ON"
+
+-- The CXX compiler identification is GNU 11.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Library imgui found /home/lakin/.conan/data/imgui/1.81/_/_/package/133a1f2158ff2cf69739f316ec21143785be54c7/lib/libimgui.a
+-- Found: /home/lakin/.conan/data/imgui/1.81/_/_/package/133a1f2158ff2cf69739f316ec21143785be54c7/lib/libimgui.a
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/lakin/school-repos/cmake-init-conan-example/build/dev
+
+cmake-init-conan-example on  master [⇡?] is 📦 v0.1.0 via 🐍 v3.10.2 (.venv)
+➜ VERBOSE=1 cmake --build --preset=dev
+/usr/bin/cmake -S/home/lakin/school-repos/cmake-init-conan-example -B/home/lakin/school-repos/cmake-init-conan-example/build/dev --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/lakin/school-repos/cmake-init-conan-example/build/dev/CMakeFiles /home/lakin/school-repos/cmake-init-conan-example/build/dev//CMakeFiles/progress.marks
+/usr/bin/make  -f CMakeFiles/Makefile2 all
+make[1]: Entering directory '/home/lakin/school-repos/cmake-init-conan-example/build/dev'
+/usr/bin/make  -f CMakeFiles/conan-example_exe.dir/build.make CMakeFiles/conan-example_exe.dir/depend
+/usr/bin/make  -f test/CMakeFiles/conan-example_test.dir/build.make test/CMakeFiles/conan-example_test.dir/depend
+make[2]: Entering directory '/home/lakin/school-repos/cmake-init-conan-example/build/dev'
+cd /home/lakin/school-repos/cmake-init-conan-example/build/dev && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/lakin/school-repos/cmake-init-conan-example /home/lakin/school-repos/cmake-init-conan-example /home/lakin/school-repos/cmake-init-conan-example/build/dev /home/lakin/school-repos/cmake-init-conan-example/build/dev /home/lakin/school-repos/cmake-init-conan-example/build/dev/CMakeFiles/conan-example_exe.dir/DependInfo.cmake --color=
+make[2]: Entering directory '/home/lakin/school-repos/cmake-init-conan-example/build/dev'
+cd /home/lakin/school-repos/cmake-init-conan-example/build/dev && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/lakin/school-repos/cmake-init-conan-example /home/lakin/school-repos/cmake-init-conan-example/test /home/lakin/school-repos/cmake-init-conan-example/build/dev /home/lakin/school-repos/cmake-init-conan-example/build/dev/test /home/lakin/school-repos/cmake-init-conan-example/build/dev/test/CMakeFiles/conan-example_test.dir/DependInfo.cmake --color=
+make[2]: Leaving directory '/home/lakin/school-repos/cmake-init-conan-example/build/dev'
+make[2]: Leaving directory '/home/lakin/school-repos/cmake-init-conan-example/build/dev'
+/usr/bin/make  -f CMakeFiles/conan-example_exe.dir/build.make CMakeFiles/conan-example_exe.dir/build
+/usr/bin/make  -f test/CMakeFiles/conan-example_test.dir/build.make test/CMakeFiles/conan-example_test.dir/build
+make[2]: Entering directory '/home/lakin/school-repos/cmake-init-conan-example/build/dev'
+make[2]: Entering directory '/home/lakin/school-repos/cmake-init-conan-example/build/dev'
+[ 50%] Building CXX object test/CMakeFiles/conan-example_test.dir/source/conan-example_test.cpp.o
+[ 50%] Building CXX object CMakeFiles/conan-example_exe.dir/source/main.cpp.o
+cd /home/lakin/school-repos/cmake-init-conan-example/build/dev/test && /usr/bin/c++ -DIMGUI_USER_CONFIG=\"imgui_user_config.h\" -DDOCTEST_CONFIG_IMPLEMENT_WITH_MAIN -isystem /home/lakin/.conan/data/imgui/1.81/_/_/package/133a1f2158ff2cf69739f316ec21143785be54c7/include -isystem /home/lakin/.conan/data/doctest/2.4.6/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wshadow -Wformat=2 -Wundef -Werror=float-equal -g -std=c++17 -MD -MT test/CMakeFiles/conan-example_test.dir/source/conan-example_test.cpp.o -MF CMakeFiles/conan-example_test.dir/source/conan-example_test.cpp.o.d -o CMakeFiles/conan-example_test.dir/source/conan-example_test.cpp.o -c /home/lakin/school-repos/cmake-init-conan-example/test/source/conan-example_test.cpp
+/usr/bin/c++ -DIMGUI_USER_CONFIG=\"imgui_user_config.h\" -isystem /home/lakin/.conan/data/imgui/1.81/_/_/package/133a1f2158ff2cf69739f316ec21143785be54c7/include -isystem /home/lakin/.conan/data/eigen/3.3.9/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include/eigen3 -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wshadow -Wformat=2 -Wundef -Werror=float-equal -g -std=c++17 -MD -MT CMakeFiles/conan-example_exe.dir/source/main.cpp.o -MF CMakeFiles/conan-example_exe.dir/source/main.cpp.o.d -o CMakeFiles/conan-example_exe.dir/source/main.cpp.o -c /home/lakin/school-repos/cmake-init-conan-example/source/main.cpp
+[ 75%] Linking CXX executable conan-example
+/usr/bin/cmake -E cmake_link_script CMakeFiles/conan-example_exe.dir/link.txt --verbose=1
+/usr/bin/c++ -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wshadow -Wformat=2 -Wundef -Werror=float-equal -g CMakeFiles/conan-example_exe.dir/source/main.cpp.o -o conan-example  /home/lakin/.conan/data/imgui/1.81/_/_/package/133a1f2158ff2cf69739f316ec21143785be54c7/lib/libimgui.a -lm
+make[2]: Leaving directory '/home/lakin/school-repos/cmake-init-conan-example/build/dev'
+[ 75%] Built target conan-example_exe
+[100%] Linking CXX executable conan-example_test
+cd /home/lakin/school-repos/cmake-init-conan-example/build/dev/test && /usr/bin/cmake -E cmake_link_script CMakeFiles/conan-example_test.dir/link.txt --verbose=1
+/usr/bin/c++ -Wall -Wextra -Wpedantic -Wconversion -Wsign-conversion -Wcast-qual -Wshadow -Wformat=2 -Wundef -Werror=float-equal -g CMakeFiles/conan-example_test.dir/source/conan-example_test.cpp.o -o conan-example_test  /home/lakin/.conan/data/imgui/1.81/_/_/package/133a1f2158ff2cf69739f316ec21143785be54c7/lib/libimgui.a -lm
+cd /home/lakin/school-repos/cmake-init-conan-example/build/dev/test && /usr/bin/cmake -D TEST_TARGET=conan-example_test -D TEST_EXECUTABLE=/home/lakin/school-repos/cmake-init-conan-example/build/dev/test/conan-example_test -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/lakin/school-repos/cmake-init-conan-example/build/dev/test -D TEST_SPEC= -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_ADD_LABELS=NO -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_LIST=conan-example_test_TESTS -D TEST_JUNIT_OUTPUT_DIR= -D CTEST_FILE=/home/lakin/school-repos/cmake-init-conan-example/build/dev/test/conan-example_test_tests-b858cb2.cmake -P /home/lakin/.conan/data/doctest/2.4.6/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/lib/cmake/doctestAddTests.cmake
+make[2]: Leaving directory '/home/lakin/school-repos/cmake-init-conan-example/build/dev'
+[100%] Built target conan-example_test
+make[1]: Leaving directory '/home/lakin/school-repos/cmake-init-conan-example/build/dev'
+/usr/bin/cmake -E cmake_progress_start /home/lakin/school-repos/cmake-init-conan-example/build/dev/CMakeFiles 0
+
+cmake-init-conan-example on  master [⇡?] is 📦 v0.1.0 via 🐍 v3.10.2 (.venv) took 2s
+➜
+```
+
 ## Doesn't work
 ```sh
 rm -rf conan build
