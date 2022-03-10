@@ -13,24 +13,7 @@ project(
 include(cmake/project-is-top-level.cmake)
 include(cmake/variables.cmake)
 
-# ---- Declare library ----
-
-add_library(
-    conan-example_lib OBJECT
-    source/lib.cpp
-)
-
-target_include_directories(
-    conan-example_lib ${warning_guard}
-    PUBLIC
-    "$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/source>"
-)
-
-target_compile_features(conan-example_lib PUBLIC cxx_std_17)
-
-find_package(fmt REQUIRED)
-
-target_link_libraries(conan-example_lib PRIVATE fmt::fmt)
+find_package(imgui REQUIRED)
 
 # ---- Declare executable ----
 
@@ -45,7 +28,7 @@ set_target_properties(
 
 target_compile_features(conan-example_exe PRIVATE cxx_std_17)
 
-target_link_libraries(conan-example_exe PRIVATE conan-example_lib)
+target_link_libraries(conan-example_exe PRIVATE imgui::imgui)
 
 # ---- Install rules ----
 
